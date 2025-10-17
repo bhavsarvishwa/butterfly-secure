@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Butterfly Interactive App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>🦋 Butterfly Interactive App</h1>
+
+    <!-- User Settings -->
+    <section aria-label="Butterfly Preferences" class="controls">
+      <label for="speedSelect">Select Speed:</label>
+      <select id="speedSelect" aria-label="Butterfly speed">
+        <option value="slow">Slow</option>
+        <option value="medium">Medium</option>
+        <option value="fast">Fast</option>
+      </select>
+
+      <label for="colorSelect">Select Colour:</label>
+      <select id="colorSelect" aria-label="Butterfly colour">
+        <option value="orange">Orange</option>
+        <option value="blue">Blue</option>
+        <option value="pink">Pink</option>
+        <option value="green">Green</option>
+      </select>
+
+      <button id="spawnBtn" aria-label="Spawn butterfly">Spawn Butterfly</button>
+      <button id="resetBtn" aria-label="Reset preferences">Reset</button>
+    </section>
+
+    <!-- Canvas Area -->
+    <section id="butterflyArea" tabindex="0" aria-label="Butterfly display area"></section>
+
+    <!-- Optional Dashboard -->
+    <section id="dashboard" aria-label="Butterfly Data Dashboard">
+      <h2>Interaction Summary</h2>
+      <canvas id="interactionChart" width="400" height="200"></canvas>
+      <p id="totalCount">Total butterflies spawned: <span>0</span></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script src="chart.js"></script>
+</body>
+</html>
